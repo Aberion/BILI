@@ -21,7 +21,7 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build and run with Maven
-        run: mvn clean package && java -jar target/BilibiliTask-1.0.1.jar
+        run: mvn clean package && java -jar BilibiliTask-1.0.1.jar
 
       
 
