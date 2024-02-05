@@ -7,6 +7,7 @@
   <groupId>top.srcrs</groupId>
   <artifactId>BilibiliTask</artifactId>
   <version>1.0.1</version>
+  <packaging>jar</packaging>
 
   <name>BilibiliTask</name>
   <!-- FIXME change it to the project's website -->
