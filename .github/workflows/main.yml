@@ -23,4 +23,4 @@ jobs:
           SESSDATA: ${{ secrets.SESSDATA }}
           DEDEUSERID: ${{ secrets.DEDEUSERID }}
           BILI_JCT: ${{ secrets.BILI_JCT }}
-        run: java -jar target/BilibiliTask-1.0-SNAPSHOT-jar-with-dependencies.jar
+        run: sudo java -jar target/BilibiliTask-1.0-SNAPSHOT-jar-with-dependencies.jar
