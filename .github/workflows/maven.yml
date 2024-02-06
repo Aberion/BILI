@@ -30,12 +30,7 @@ jobs:
     - name: Build with Maven
       run: |
           mvn -B package --file pom.xml 
-          cd src
-          cd main
-          cd java
-          cd top
-          cd srcrs
-          java BiliStart.java
+          java -target/BilibiliTask-1.0.1.jar
           
     
 
