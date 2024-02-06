@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: |
           mvn -B package --file pom.xml 
-          java -target/BilibiliTask-1.0.1.jar
+          java -jar target/BilibiliTask-1.0.1.jar
           
     
 
