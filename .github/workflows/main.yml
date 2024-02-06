@@ -1,0 +1,26 @@
+name: BilibiliTask
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
+      - name: Run BilibiliTask
+        env:
+          SESSDATA: ${{ secrets.SESSDATA }}
+          DEDEUSERID: ${{ secrets.DEDEUSERID }}
+          BILI_JCT: ${{ secrets.BILI_JCT }}
+        run: java -jar target/BilibiliTask-1.0-SNAPSHOT-jar-with-dependencies.jar
